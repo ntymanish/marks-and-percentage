@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: teal;
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 550px;
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.6;
+    
+}
+.main h1{
+    text-align: center;
+    text-transform: capitalize;
+    color: red;
+    margin-top: 20px;
+    
+}
+.main h1 ::after{
+    content: "";
+    border-bottom: 2px solid red;
+    width: auto;
+}
+.sub{
+    text-align: center;
+   
+}
+.subj{
+    margin-top: 20px;
+}
+.life{
+    font-size: 25px;
+}
+span{
+    font-size: 30px;
+}
+#btn{
+    padding: 9px;
+    font-size: 20px;
+    align-items: center;
+    border: 2px solid red;
+    outline: none;
+    margin-top: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 900;
+
+}

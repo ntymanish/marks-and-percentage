@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Get your total marks and percentage</title>
+    <link href="your_per.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="main">
+        <h1>Get your marks and percentage</h1>
+        <div class="sub">
+            <h1> enter your marks</h1>
+           <div class="subj">
+           <span> Science:</span> <input type="text" placeholder="science number..." id="science" class="life"><br><br>
+            <span>Math:</span> <input type="text" placeholder="math number..." id="math" class="life"> <br><br>
+            <span>English:</span> <input type="text" placeholder="english number..." id="eng" class="life"> <br><br>
+            <span>Computer:</span> <input type="text" placeholder="computer number..." id="computer" class="life"> <br><br>
+            <span>Hindi: </span><input type="text" placeholder="hindi number..." id="hindi" class="life"><br><br>
+            </div>
+            <button id="btn" onclick="key()">full marks</button><br><br>
+        <h2 id="marks"></h2>
+        </div>
+        
+    </div>
+    <script>
+        function key (){
+         var science = document.getElementById('science').value;
+         var math = document.getElementById('math').value;
+         var eng = document.getElementById('eng').value;
+         var comp = document.getElementById('computer').value;
+         var hindi = document.getElementById('hindi').value;
+        if(science.length>=4 || math.length>=4 || eng.length>=4 || comp.length>=4 || hindi.length>=4 ){
+          alert('please enter valid number')
+         } else if(science>=100 || math>=100 || eng>=100 || comp>=100 || hindi>=100){
+             alert('marks should be under 100')
+          } else if(science=='' && math=='' && eng=='' && comp== '' && hindi==''){
+               alert('please enter subject marks')
+          }
+          else if( science=='' ){
+            alert('please enter your science marks')
+         } else if ( math==''){
+            alert('please enter math marks')
+         }
+         else if ( eng==''){
+            alert('please enter englsih marks')
+         }
+         else if ( comp==''){
+            alert('please enter computer marks')
+         }
+         else if ( hindi==''){
+            alert('please enter hindi marks')
+         } else{
+            var total = parseFloat(science)  + parseFloat(math)  + parseFloat(eng ) + parseFloat(comp ) + parseFloat(hindi);
+            var per= Math.floor(total/500*100);
+            marks.innerHTML=` your total makrs is ${total} and your percentage is ${per}`
+         }
+
+        
+         
+
+            
+
+
+        }
+    </script>
+</body>
+</html>
